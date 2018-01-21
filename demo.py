@@ -547,6 +547,10 @@ def creatOutfit():
 			break;
 		else:
 			idealShoes = shoe
+	del idealShoes['_id']
+	del ideaPants['_id']
+	del IdealOuterwear['_id']
+
 
 	return jsonify([idealOuterwear, idealPants, idealShoes])
 
@@ -578,6 +582,7 @@ def creatOutfit():
 def getAllTops():
 	topsauce = []
 	for stuff in db.tops.find():
+		del stuff['_id']
 		topsauce.append(stuff)
 	return jsonify(topsauce)	
 @app.route('/getBottoms', methods = ['GET', 'POST'])
@@ -591,6 +596,7 @@ def getAllBottoms():
 def getAllShoes():
 	shoesauce = []
 	for stuff in db.shoes.find():
+		del stuff['_id']
 		shoesauce.append(stuff)
 	return jsonify(shoesauce)
 app.run(host="0.0.0.0", port=80)
