@@ -239,11 +239,14 @@ def runThruAllModels():
 	    	
 			    	filepath = str(subdir + os.sep + file)
 			    	if "DS_Store" not in filepath:
-			    		Htfile = 'http://54.200.230.168/'+file
-			    		Htfile = Htfile.replace(" ", '%20')
-		    			overallJSON.append(analyzeModel(Htfile))
-		    			counter = counter +1
-		    			print counter
+					try:
+						Htfile = 'http://54.200.230.168/'+file
+						Htfile = Htfile.replace(" ", '%20')
+						overallJSON.append(analyzeModel(Htfile))
+						counter = counter +1
+						print counter
+					except:
+						print "Error"
 	    		
 
 	    	
