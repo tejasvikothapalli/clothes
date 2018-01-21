@@ -185,6 +185,7 @@ def perfect_match(db_name) :
 	print("Did we found a perfect match: %s" % str(search_results['hits'][0]['is_perfect_match']))
 
 def detection(imagename) :
+	print imagename
 
 	# print("--------------------------------------------------------------------------------------------")
 	# print("--------- detection")
