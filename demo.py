@@ -550,10 +550,10 @@ def creatOutfit():
 	del idealShoes['_id']
 	del idealPants['_id']
 	del idealOuterwear['_id']
+	list = [idealOuterwear['link'], idealPants['link'], idealShoes['link']]
 
 
-	return jsonify([idealOuterwear, idealPants, idealShoes])
-
+	return list
 
 
 
