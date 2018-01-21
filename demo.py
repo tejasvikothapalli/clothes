@@ -287,7 +287,8 @@ def analyzeSingleItem(imagename):
 	data = response
 
 	returnval = {}
-
+	
+	pprint(data)
 	for item1 in data['response']['prediction']['data']['tags']:
 	 		# pprint(item)
 	 		if (item1['type'] == 'color'):
