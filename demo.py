@@ -233,6 +233,7 @@ def runThruAllModels():
 	counter = 0;
 	overallJSON = []
 	# modelList = ["https://cdn.shopify.com/s/files/1/0162/2116/files/Smart_Everyday_Outfit_Ideas_For_Men_2.jpg?v=1488179974", "https://i.pinimg.com/736x/6c/cf/18/6ccf181f6261dd2b290dc395ac1d9007--mens-fall-outfits-men-outfits.jpg"]
+	print "hi"
 	for subdir, dirs, files in os.walk('/fols'):
 	    for file in files:
 	    	
