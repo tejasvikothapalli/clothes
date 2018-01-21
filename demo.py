@@ -33,7 +33,7 @@ import random
 from datetime import datetime
 
 from pymongo import MongoClient
-client = MongoClient('127.0.0.1:27018')
+client = MongoClient('127.0.0.1:27017')
 db = client.clothing
 tops = db.tops
 bottoms = db.bottoms
