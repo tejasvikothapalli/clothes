@@ -1,0 +1,1 @@
+"[{\"link\": \"https://i.imgur.com/0NDNIru.jpg\", \"shoe\": \"white\", \"pants\": \"light blue\"}, {\"sweater\": \"grey\", \"link\": \"https://i.imgur.com/ap7ECRt.jpg\", \"shoe\": \"dark green\", \"pants\": \"dark wash denim\"}]"
