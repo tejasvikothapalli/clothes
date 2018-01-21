@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 import json
 from deepomatic import deepomatic
@@ -331,7 +332,8 @@ def analyzeSingleItem(imagename):
 	pprint (returnval)
 	addToWardrobe(returnval)
 
-# analyzeSingleItem()
+
+analyzeSingleItem(sys.argv[0]);
 
 
 def KToF(k):
