@@ -583,21 +583,21 @@ def getAllTops():
 	topsauce = []
 	for stuff in db.tops.find():
 		del stuff['_id']
-		topsauce.append(stuff)
+		topsauce.append(stuff['link'])
 	return jsonify(topsauce)	
 @app.route('/getBottoms', methods = ['GET', 'POST'])
 def getAllBottoms():
 	bottomsauce = []
 	for stuff in db.bottoms.find():
 		del stuff['_id']
-		bottomsauce.append(stuff)
+		bottomsauce.append(stuff['link'])
 	return jsonify(bottomsauce)	
 @app.route('/getShoes', methods = ['GET', 'POST'])
 def getAllShoes():
 	shoesauce = []
 	for stuff in db.shoes.find():
 		del stuff['_id']
-		shoesauce.append(stuff)
+		shoesauce.append(stuff['link'])
 	return jsonify(shoesauce)
 app.run(host="0.0.0.0", port=80)
 
