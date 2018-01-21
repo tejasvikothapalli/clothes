@@ -584,6 +584,7 @@ def getAllTops():
 def getAllBottoms():
 	bottomsauce = []
 	for stuff in db.bottoms.find():
+		del stuff['_id']
 		bottomsauce.append(stuff)
 	return jsonify(bottomsauce)	
 @app.route('/getShoes', methods = ['GET', 'POST'])
