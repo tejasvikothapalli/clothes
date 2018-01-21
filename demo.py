@@ -18,7 +18,7 @@ import itertools
 import operator
 import collections
 import webcolors
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 
 
 
@@ -548,7 +548,7 @@ def creatOutfit():
 		else:
 			idealShoes = shoe
 
-	print [idealOuterwear, idealPants, idealShoes]
+	return jsonify([idealOuterwear, idealPants, idealShoes])
 
 
 
@@ -579,19 +579,20 @@ def getAllTops():
 	topsauce = []
 	for stuff in db.tops.find():
 		topsauce.append(stuff)
-	return topsauce	
+	return jsonify(topsauce)	
 @app.route('/getBottoms', methods = ['GET', 'POST'])
 def getAllBottoms():
 	bottomsauce = []
 	for stuff in db.bottoms.find():
 		bottomsauce.append(stuff)
-	return bottomsauce	
+	return jsonify(bottomsauce)	
 @app.route('/getShoes', methods = ['GET', 'POST'])
 def getAllShoes():
 	shoesauce = []
 	for stuff in db.shoes.find():
 		shoesauce.append(stuff)
-	return shoesauce	
+	return jsonify(shoesauce)
+app.run(host="0.0.0.0", port=80)
 
 
 
