@@ -33,6 +33,7 @@ import random
 from datetime import datetime
 
 from pymongo import MongoClient
+app = Flask(__name__)
 client = MongoClient('127.0.0.1:27017')
 db = client.clothing
 tops = db.tops
@@ -489,7 +490,7 @@ def findAllModelGarmentColors(data):
 	for stuff in modelData:
 		arr.append(stuff)
 
-
+@app.route('/createOutfit', methods = ['GET', 'POST'])
 def creatOutfit():
 	
 
@@ -570,17 +571,19 @@ def creatOutfit():
 # 	if(!foundTwitterColorInWardrobe)
 # 		for item in pants
 # 			if (item.color = twitterColor)
-		
+@app.route('/getTops', methods = ['GET', 'POST'])		
 def getAllTops():
 	topsauce = []
 	for stuff in db.tops.find():
 		topsauce.append(stuff)
 	return topsauce	
+@app.route('/getBottoms', methods = ['GET', 'POST'])
 def getAllBottoms():
 	bottomsauce = []
 	for stuff in db.bottoms.find():
 		bottomsauce.append(stuff)
 	return bottomsauce	
+@app.route('/getShoes', methods = ['GET', 'POST'])
 def getAllShoes():
 	shoesauce = []
 	for stuff in db.shoes.find():
@@ -588,6 +591,8 @@ def getAllShoes():
 	return shoesauce	
 
 
+if __name__ == '__main__':
+      app.run(host = '0.0.0.0',port=5005)
 
 
 	
