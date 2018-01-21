@@ -334,7 +334,7 @@ def analyzeSingleItem(imagename):
 	addToWardrobe(returnval)
 
 
-analyzeSingleItem(sys.argv[0]);
+analyzeSingleItem(sys.argv[1]);
 
 
 def KToF(k):
