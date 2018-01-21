@@ -53,6 +53,10 @@ client = deepomatic.Client(appID, apiKey)
 # For the sake of reproducibility, we always wait for the tasks to complete via a check on the taskID
 # ---------------------------------------------------------------------------------------------------
 
+@app.route('/')
+def main():
+    return "Server works"
+
 def db_and_indexing(db_name_1, db_name_2) :
 
 	print("--------------------------------------------------------------------------------------------")
