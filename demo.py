@@ -553,7 +553,7 @@ def creatOutfit():
 	list = [idealOuterwear['link'], idealPants['link'], idealShoes['link']]
 
 
-	return list
+	return jsonify(list)
 
 
 
