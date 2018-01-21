@@ -548,7 +548,7 @@ def creatOutfit():
 		else:
 			idealShoes = shoe
 	del idealShoes['_id']
-	del ideaPants['_id']
+	del idealPants['_id']
 	del IdealOuterwear['_id']
 
 
