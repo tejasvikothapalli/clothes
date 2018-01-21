@@ -17,7 +17,6 @@ from base64 import b64encode
 
 import numpy as np
 # import cv2
-from matplotlib import pyplot as plt
 #from twython import Twython
 import json
 import csv
